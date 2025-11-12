@@ -11,7 +11,7 @@ android {
         applicationId 'org.proninyaroslav.libretorrent'
         minSdkVersion 24
         targetSdkVersion 35
-        compileSdk 35
+        compileSdkVersion 36
         // Version code format: 0000xx0
         // xx - version code
         // trailing zero - auto increment for split ABI
@@ -124,9 +124,9 @@ tasks.withType(Test).configureEach {
     }
 }
 
-def ROOM_VERSION = '2.7.2'
-def LIFECYCLE_VERSION = '2.9.2'
-def NAV_VERSION = "2.9.3"
+def ROOM_VERSION = '2.8.3'
+def LIFECYCLE_VERSION = '2.9.4'
+def NAV_VERSION = "2.9.6"
 def MOSHI_VERSION = "1.15.2"
 def PAGING_VERSION = "3.3.6"
 
@@ -142,8 +142,8 @@ dependencies {
 
     /* AndroidX libraries */
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'androidx.fragment:fragment:1.8.8'
-    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.fragment:fragment:1.8.9'
+    implementation 'androidx.activity:activity:1.11.0'
     implementation "androidx.lifecycle:lifecycle-livedata-core:$LIFECYCLE_VERSION"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$LIFECYCLE_VERSION"
     implementation 'androidx.multidex:multidex:2.0.1'
@@ -155,29 +155,30 @@ dependencies {
     implementation "androidx.room:room-runtime:$ROOM_VERSION"
     annotationProcessor "androidx.room:room-compiler:$ROOM_VERSION" /* For schemas import */
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'androidx.work:work-runtime:2.10.3'
-    implementation 'com.google.android.material:material:1.13.0-alpha12'
+    implementation 'androidx.work:work-runtime:2.11.0'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel:$LIFECYCLE_VERSION"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION"
     implementation 'androidx.preference:preference:1.2.1'
     // Fix for WorkManager https://github.com/google/ExoPlayer/issues/7993
-    implementation 'com.google.guava:guava:33.4.8-jre'
+    implementation 'com.google.guava:guava:33.5.0-jre'
     implementation "androidx.navigation:navigation-fragment:$NAV_VERSION"
     implementation "androidx.navigation:navigation-ui:$NAV_VERSION"
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.documentfile:documentfile:1.1.0'
 
     /* ReactiveX */
-    implementation 'io.reactivex.rxjava3:rxjava:3.1.11'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.12'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
 
     /* ACRA */
-    def ACRA_VERSION = '5.12.0'
+    def ACRA_VERSION = '5.13.1'
     implementation "ch.acra:acra-dialog:$ACRA_VERSION"
     implementation "ch.acra:acra-mail:$ACRA_VERSION"
 
     /* libtorrent wrapper */
-    def LIBTORRENT4J_VERSION = '2.1.0-37'
+    def LIBTORRENT4J_VERSION = '2.1.0-38'
     implementation "org.libtorrent4j:libtorrent4j:$LIBTORRENT4J_VERSION"
     implementation "org.libtorrent4j:libtorrent4j-android-arm:$LIBTORRENT4J_VERSION"
     implementation "org.libtorrent4j:libtorrent4j-android-arm64:$LIBTORRENT4J_VERSION"
@@ -192,8 +193,8 @@ dependencies {
     //noinspection NewerVersionAvailable,GradleDependency
     implementation 'commons-io:commons-io:2.5'
     implementation 'org.apache.commons:commons-text:1.14.0'
-    implementation 'com.google.code.gson:gson:2.13.1'
-    implementation 'net.java.dev.jna:jna:5.17.0@aar'
+    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'net.java.dev.jna:jna:5.18.1@aar'
     implementation "com.squareup.moshi:moshi:$MOSHI_VERSION"
     implementation "com.squareup.moshi:moshi-adapters:$MOSHI_VERSION"
 
@@ -201,7 +202,7 @@ dependencies {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.2.0") {
             because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
         }
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.20") {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.0") {
             because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
         }
     }
