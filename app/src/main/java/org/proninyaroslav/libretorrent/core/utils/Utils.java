@@ -63,7 +63,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.color.DynamicColors;
 import com.google.android.material.divider.MaterialDividerItemDecoration;
 import com.google.android.material.motion.MotionUtils;
 
@@ -912,60 +911,15 @@ public class Utils {
         Runtime.getRuntime().exit(0);
     }
 
-    public static void applyAppTheme(@NonNull Application application) {
+    public static void applyNightMode(@NonNull Application application) {
         var pref = RepositoryHelper.getSettingsRepository(application);
         var theme = pref.theme();
-
         if (theme instanceof PrefTheme.System) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         } else if (theme instanceof PrefTheme.Light) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         } else if (theme instanceof PrefTheme.Dark) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else if (theme instanceof PrefTheme.Black) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
-                @Override
-                public void onActivityPreCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
-                    var theme = pref.theme() instanceof PrefTheme.Black ? R.style.AppTheme_Black : R.style.AppTheme;
-                    activity.setTheme(theme);
-                }
-
-                @Override
-                public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
-                }
-
-                @Override
-                public void onActivityStarted(@NonNull Activity activity) {
-                }
-
-                @Override
-                public void onActivityResumed(@NonNull Activity activity) {
-                }
-
-                @Override
-                public void onActivityPaused(@NonNull Activity activity) {
-                }
-
-                @Override
-                public void onActivityStopped(@NonNull Activity activity) {
-                }
-
-                @Override
-                public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
-                }
-
-                @Override
-                public void onActivityDestroyed(@NonNull Activity activity) {
-                }
-            });
-        }
-    }
-
-    public static void applyDynamicTheme(@NonNull Application application) {
-        var pref = RepositoryHelper.getSettingsRepository(application);
-        if (pref.dynamicColors()) {
-            DynamicColors.applyToActivitiesIfAvailable(application);
         }
     }
 }

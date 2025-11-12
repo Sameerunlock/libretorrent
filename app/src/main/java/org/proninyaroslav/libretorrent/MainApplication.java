@@ -25,9 +25,6 @@ import android.util.Log;
 
 import androidx.multidex.MultiDexApplication;
 
-import com.google.android.material.color.DynamicColors;
-import com.google.android.material.color.DynamicColorsOptions;
-
 import org.acra.ACRA;
 import org.acra.config.CoreConfigurationBuilder;
 import org.acra.config.DialogConfigurationBuilder;
@@ -67,8 +64,7 @@ public class MainApplication extends MultiDexApplication {
 
         TorrentNotifier.getInstance(this).makeNotifyChans();
 
-        Utils.applyAppTheme(this);
-        Utils.applyDynamicTheme(this);
+        Utils.applyNightMode(this);
     }
 
     /** @noinspection JavaReflectionMemberAccess*/

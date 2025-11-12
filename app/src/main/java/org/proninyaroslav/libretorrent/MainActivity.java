@@ -26,7 +26,6 @@ import android.view.LayoutInflater;
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -43,9 +42,10 @@ import org.proninyaroslav.libretorrent.ui.NavBarFragment;
 import org.proninyaroslav.libretorrent.ui.NavBarFragmentDirections;
 import org.proninyaroslav.libretorrent.ui.PermissionDeniedDialog;
 import org.proninyaroslav.libretorrent.ui.PermissionManager;
+import org.proninyaroslav.libretorrent.ui.base.ThemeActivity;
 import org.proninyaroslav.libretorrent.ui.home.HomeViewModel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ThemeActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private static final String KEY_PERMISSION_DENIED_DIALOG_REQUEST = TAG + "_permission_denied";

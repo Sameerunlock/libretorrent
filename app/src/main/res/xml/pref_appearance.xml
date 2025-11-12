@@ -12,6 +12,13 @@
             android:title="@string/pref_theme_title"
             app:singleLineTitle="false"
             app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_theme_black_backgrounds"
+            android:persistent="false"
+            android:summary="@string/pref_theme_black_backgrounds_summary"
+            android:title="@string/pref_black_backgrounds"
+            app:singleLineTitle="false" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_notification_category">

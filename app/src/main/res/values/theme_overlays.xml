@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3.Light.NoActionBar">
+    <style name="ThemeOverlay.AppTheme.MediumContrast" parent="AppTheme">
         <item name="colorPrimary">@color/md_theme_primary_mediumContrast</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary_mediumContrast</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer_mediumContrast</item>
@@ -69,7 +69,7 @@
         <item name="colorOnOkContainer">@color/colorOnOkContainer_mediumContrast</item>
     </style>
 
-    <style name="ThemeOverlay.AppTheme.HighContrast" parent="Theme.Material3.Light.NoActionBar">
+    <style name="ThemeOverlay.AppTheme.HighContrast" parent="AppTheme">
         <item name="colorPrimary">@color/md_theme_primary_highContrast</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary_highContrast</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer_highContrast</item>

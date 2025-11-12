@@ -19,8 +19,7 @@
 
 package org.proninyaroslav.libretorrent.core.model.data.preferences;
 
-public abstract sealed class PrefTheme permits PrefTheme.Black, PrefTheme.Dark,
-        PrefTheme.Light, PrefTheme.System, PrefTheme.Unknown {
+public abstract sealed class PrefTheme permits PrefTheme.Dark, PrefTheme.Light, PrefTheme.System {
     protected final int id;
 
     public int getId() {
@@ -31,11 +30,6 @@ public abstract sealed class PrefTheme permits PrefTheme.Black, PrefTheme.Dark,
         this.id = id;
     }
 
-    public static final class Unknown extends PrefTheme {
-        public Unknown() {
-            super(-1);
-        }
-    }
 
     public static final class System extends PrefTheme {
         public System() {
@@ -55,28 +49,16 @@ public abstract sealed class PrefTheme permits PrefTheme.Black, PrefTheme.Dark,
         }
     }
 
-    public static final class Black extends PrefTheme {
-        public Black() {
-            super(3);
-        }
-    }
-
     public static PrefTheme fromId(int id) {
         switch (id) {
-            case 0 -> {
-                return new System();
-            }
             case 1 -> {
                 return new Light();
             }
             case 2 -> {
                 return new Dark();
             }
-            case 3 -> {
-                return new Black();
-            }
         }
 
-        return new Unknown();
+        return new System();
     }
 }

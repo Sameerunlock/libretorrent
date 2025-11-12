@@ -19,6 +19,8 @@
 
 package org.proninyaroslav.libretorrent.core.settings;
 
+import android.content.SharedPreferences;
+
 import org.proninyaroslav.libretorrent.core.model.data.preferences.PrefTheme;
 
 import io.reactivex.rxjava3.core.Flowable;
@@ -64,6 +66,10 @@ public interface SettingsRepository
     boolean dynamicColors();
 
     void dynamicColors(boolean val);
+
+    boolean blackBackgrounds();
+
+    void blackBackgrounds(boolean val);
 
     int ledIndicatorColorNotify();
 
@@ -432,4 +438,8 @@ public interface SettingsRepository
     boolean askNotificationPermission();
 
     void askNotificationPermission(boolean val);
+
+    void registerOnSettingsChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener);
+
+    void unregisterOnSettingsChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener);
 }

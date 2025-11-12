@@ -189,11 +189,9 @@ public class SettingsRepositoryImpl implements SettingsRepository {
     private final FileSystemFacade fs;
     private final Moshi moshi = new Moshi.Builder()
             .add(PolymorphicJsonAdapterFactory.of(PrefTheme.class, "type")
-                    .withSubtype(PrefTheme.Unknown.class, "unknown")
                     .withSubtype(PrefTheme.System.class, "system")
                     .withSubtype(PrefTheme.Light.class, "light")
                     .withSubtype(PrefTheme.Dark.class, "dark")
-                    .withSubtype(PrefTheme.Black.class, "black")
             )
             .build();
 
@@ -351,7 +349,7 @@ public class SettingsRepositoryImpl implements SettingsRepository {
                 return moshi.adapter(PrefTheme.class).fromJson(json);
             } catch (IOException e) {
                 Log.e(TAG, "Unable to decode theme", e);
-                return new PrefTheme.Unknown();
+                return Default.theme;
             }
         }
     }
@@ -374,6 +372,19 @@ public class SettingsRepositoryImpl implements SettingsRepository {
     public void dynamicColors(boolean val) {
         pref.edit()
                 .putBoolean(appContext.getString(R.string.pref_key_theme_dynamic_colors), val)
+                .apply();
+    }
+
+    @Override
+    public boolean blackBackgrounds() {
+        return pref.getBoolean(appContext.getString(R.string.pref_key_theme_black_backgrounds),
+                false);
+    }
+
+    @Override
+    public void blackBackgrounds(boolean val) {
+        pref.edit()
+                .putBoolean(appContext.getString(R.string.pref_key_theme_black_backgrounds), val)
                 .apply();
     }
 
@@ -1472,4 +1483,15 @@ public class SettingsRepositoryImpl implements SettingsRepository {
                 .putBoolean(appContext.getString(R.string.pref_key_ask_notification_permission), val)
                 .apply();
     }
+
+    @Override
+    public void registerOnSettingsChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        pref.registerOnSharedPreferenceChangeListener(listener);
+    }
+
+    @Override
+    public void unregisterOnSettingsChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+        pref.unregisterOnSharedPreferenceChangeListener(listener);
+    }
+
 }

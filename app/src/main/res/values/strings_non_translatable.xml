@@ -27,7 +27,6 @@
         <item>@string/pref_theme_entries_3</item>
         <item>@string/pref_theme_entries_0</item>
         <item>@string/pref_theme_entries_1</item>
-        <item>@string/pref_theme_entries_2</item>
     </string-array>
     <string-array name="pref_foreground_notify_status_filter_entries" translatable="false">
         <item>@string/pref_foreground_notify_status_filter_entries_0</item>
@@ -92,7 +91,6 @@
         <item>@string/pref_theme_system_value</item>
         <item>@string/pref_theme_light_value</item>
         <item>@string/pref_theme_dark_value</item>
-        <item>@string/pref_theme_black_value</item>
     </string-array>
     <string name="pref_foreground_notify_status_all_value" translatable="false">0</string>
     <string name="pref_foreground_notify_status_downloading_value" translatable="false">1</string>

@@ -87,6 +87,13 @@ public class AppearanceSettingsFragment extends CustomPreferenceFragment
             bindOnPreferenceChangeListener(theme);
         }
 
+        String keyBlackBackground = getString(R.string.pref_key_theme_black_backgrounds);
+        SwitchPreferenceCompat blackBackground = findPreference(keyBlackBackground);
+        if (blackBackground != null) {
+            blackBackground.setChecked(pref.blackBackgrounds());
+            bindOnPreferenceChangeListener(blackBackground);
+        }
+
         String keyDynamicColors = getString(R.string.pref_key_theme_dynamic_colors);
         SwitchPreferenceCompat dynamicColors = findPreference(keyDynamicColors);
         if (dynamicColors != null) {
@@ -233,17 +240,14 @@ public class AppearanceSettingsFragment extends CustomPreferenceFragment
         if (preference.getKey().equals(getString(R.string.pref_key_theme))) {
             int id = Integer.parseInt((String) newValue);
             pref.theme(PrefTheme.fromId(id));
-            Utils.applyAppTheme(activity.getApplication());
 
         } else if (preference.getKey().equals(getString(R.string.pref_key_theme_dynamic_colors))) {
             pref.dynamicColors((boolean) newValue);
-            Snackbar.make(binding.coordinatorLayout,
-                            R.string.theme_settings_apply_after_reboot,
-                            Snackbar.LENGTH_LONG)
-                    .setAction(R.string.apply, (v) -> Utils.restartApp(activity))
-                    .show();
 
-        } else if (preference.getKey().equals(getString(R.string.pref_key_torrent_finish_notify))) {
+        } else if (preference.getKey().equals(getString(R.string.pref_key_theme_black_backgrounds))) {
+            pref.blackBackgrounds((boolean) newValue);
+
+        } else  if (preference.getKey().equals(getString(R.string.pref_key_torrent_finish_notify))) {
             pref.torrentFinishNotify((boolean) newValue);
 
         } else if (preference.getKey().equals(getString(R.string.pref_key_play_sound_notify))) {
