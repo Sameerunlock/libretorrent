@@ -11,8 +11,8 @@
         android:shortcutShortLabel="@string/add_torrent_title">
         <intent
             android:action="org.proninyaroslav.libretorrent.ADD_TORRENT_SHORTCUT"
-            android:targetClass="org.proninyaroslav.libretorrent.MainActivity"
-            android:targetPackage="org.proninyaroslav.libretorrent.debug" />
+            android:targetClass="com.torrentbox.app.MainActivity"
+            android:targetPackage="com.torrentbox.app.debug" />
     </shortcut>
 
     <shortcut
@@ -23,7 +23,7 @@
         android:shortcutShortLabel="@string/add_feed_channel">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="org.proninyaroslav.libretorrent.ui.addfeed.AddFeedActivity"
-            android:targetPackage="org.proninyaroslav.libretorrent.debug" />
+            android:targetClass="com.torrentbox.app.ui.addfeed.AddFeedActivity"
+            android:targetPackage="com.torrentbox.app.debug" />
     </shortcut>
 </shortcuts>

@@ -5,51 +5,63 @@
     android:id="@+id/nav_bar"
     app:startDestination="@id/home_nav">
 
+    <!-- ================= ROOT ACTION ================= -->
+
     <action
         android:id="@+id/action_add_feed_dialog"
         app:destination="@id/feed_nav">
-
         <argument
             android:name="uri"
             app:argType="android.net.Uri" />
     </action>
 
+    <!-- ================= HOME NAV ================= -->
+
     <navigation
         android:id="@+id/home_nav"
         app:startDestination="@id/homeFragment">
 
+        <!-- ===== HOME FRAGMENT ===== -->
+
         <fragment
             android:id="@+id/homeFragment"
-            android:name="org.proninyaroslav.libretorrent.ui.home.HomeFragment"
+            android:name="com.torrentbox.app.ui.home.HomeFragment"
             android:label="HomeFragment"
             tools:layout="@layout/fragment_home">
+
+            <!-- 🔒 HIDDEN -->
+            <action
+                android:id="@+id/action_home_to_hidden"
+                app:destination="@id/hiddenFragment" />
+
             <action
                 android:id="@+id/action_add_link_dialog"
                 app:destination="@id/addLinkDialog" />
-            <action
-                android:id="@+id/action_about_dialog"
-                app:destination="@id/aboutDialog" />
+
             <action
                 android:id="@+id/action_delete_torrent_dialog"
                 app:destination="@id/deleteTorrentDialog" />
+
             <action
                 android:id="@+id/action_edit_tag_dialog"
                 app:destination="@id/tag_nav">
                 <argument
                     android:name="tag"
                     android:defaultValue="@null"
-                    app:argType="org.proninyaroslav.libretorrent.core.model.data.entity.TagInfo"
+                    app:argType="com.torrentbox.app.core.model.data.entity.TagInfo"
                     app:nullable="true" />
             </action>
+
             <action
                 android:id="@+id/action_add_tag_dialog"
                 app:destination="@id/tag_nav">
                 <argument
                     android:name="tag"
                     android:defaultValue="@null"
-                    app:argType="org.proninyaroslav.libretorrent.core.model.data.entity.TagInfo"
+                    app:argType="com.torrentbox.app.core.model.data.entity.TagInfo"
                     app:nullable="true" />
             </action>
+
             <action
                 android:id="@+id/action_open_log"
                 app:destination="@id/logFragment"
@@ -58,32 +70,56 @@
                 app:popEnterAnim="?attr/navPopEnterAnim"
                 app:popExitAnim="?attr/navPopExitAnim" />
         </fragment>
+
+        <!-- ===== HIDDEN FRAGMENT ===== -->
+
+        <fragment
+            android:id="@+id/hiddenFragment"
+            android:name="com.torrentbox.app.ui.home.HiddenFragment"
+            android:label="HiddenFragment"
+            tools:layout="@layout/fragment_hidden">
+
+            <action
+                android:id="@+id/action_hidden_to_torrentDetails"
+                app:destination="@id/torrentDetailsFragment">
+
+                <argument
+                    android:name="torrentId"
+                    app:argType="string" />
+            </action>
+
+            <!-- ✅ ADD THIS -->
+            <action
+                android:id="@+id/action_delete_torrent_dialog"
+                app:destination="@id/deleteTorrentDialog" />
+        </fragment>
+
+
+        <!-- ===== DIALOGS ===== -->
+
         <dialog
             android:id="@+id/addLinkDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.addlink.AddLinkDialog"
+            android:name="com.torrentbox.app.ui.addlink.AddLinkDialog"
             android:label="AddLinkDialog"
             tools:layout="@layout/dialog_add_link">
             <action
                 android:id="@+id/action_clipboard_dialog"
                 app:destination="@id/clipboardDialog" />
         </dialog>
+
         <dialog
             android:id="@+id/clipboardDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.ClipboardDialog"
+            android:name="com.torrentbox.app.ui.ClipboardDialog"
             android:label="ClipboardDialog"
             tools:layout="@layout/item_clipboard_list">
             <argument
                 android:name="fragment_request_key"
                 app:argType="string" />
         </dialog>
-        <dialog
-            android:id="@+id/aboutDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.home.AboutDialog"
-            android:label="AboutDialog"
-            tools:layout="@layout/dialog_about" />
+
         <dialog
             android:id="@+id/deleteTorrentDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.home.DeleteTorrentDialog"
+            android:name="com.torrentbox.app.ui.home.DeleteTorrentDialog"
             android:label="DeleteTorrentDialog"
             tools:layout="@layout/dialog_delete_torrent">
             <argument
@@ -93,14 +129,19 @@
                 android:name="fragment_request_key"
                 app:argType="string" />
         </dialog>
+
+        <!-- ===== TAG / LOG ===== -->
+
         <include app:graph="@navigation/tag_graph" />
+
         <fragment
             android:id="@+id/logSettingsFragment"
-            android:name="org.proninyaroslav.libretorrent.ui.log.LogSettingsFragment"
+            android:name="com.torrentbox.app.ui.log.LogSettingsFragment"
             android:label="LogSettingsFragment" />
+
         <fragment
             android:id="@+id/logFragment"
-            android:name="org.proninyaroslav.libretorrent.ui.log.LogFragment"
+            android:name="com.torrentbox.app.ui.log.LogFragment"
             android:label="LogFragment"
             tools:layout="@layout/fragment_log">
             <action
@@ -114,28 +155,39 @@
                 android:id="@+id/action_log_filter_dialog"
                 app:destination="@id/logFilterDialog" />
         </fragment>
+
         <dialog
             android:id="@+id/logFilterDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.log.LogFilterDialog"
+            android:name="com.torrentbox.app.ui.log.LogFilterDialog"
             android:label="LogFilterDialog"
             tools:layout="@layout/dialog_log_filter" />
+
     </navigation>
+
+    <!-- ================= SETTINGS NAV ================= -->
+
     <navigation
         android:id="@+id/settings_nav"
         app:startDestination="@id/settingsFragment">
+
         <fragment
             android:id="@+id/settingsFragment"
-            android:name="org.proninyaroslav.libretorrent.ui.settings.SettingsFragment"
+            android:name="com.torrentbox.app.ui.settings.SettingsFragment"
             android:label="SettingsFragment" />
     </navigation>
+
+    <!-- ================= FEED NAV ================= -->
+
     <navigation
         android:id="@+id/feed_nav"
         app:startDestination="@id/feedFragment">
+
         <fragment
             android:id="@+id/feedFragment"
-            android:name="org.proninyaroslav.libretorrent.ui.feeds.FeedFragment"
+            android:name="com.torrentbox.app.ui.feeds.FeedFragment"
             android:label="FeedFragment"
             tools:layout="@layout/fragment_feed">
+
             <action
                 android:id="@+id/action_add_feed_dialog"
                 app:destination="@id/addFeedDialog">
@@ -145,6 +197,7 @@
                     app:argType="android.net.Uri"
                     app:nullable="true" />
             </action>
+
             <action
                 android:id="@+id/action_edit_feed_dialog"
                 app:destination="@id/addFeedDialog">
@@ -152,6 +205,7 @@
                     android:name="feed_id"
                     app:argType="long" />
             </action>
+
             <action
                 android:id="@+id/action_error_report_dialog"
                 app:destination="@id/error_report_nav">
@@ -164,18 +218,21 @@
                     app:argType="java.lang.Throwable"
                     app:nullable="true" />
             </action>
+
             <action
                 android:id="@+id/action_delete_feeds_dialog"
                 app:destination="@id/deleteFeedDialog" />
+
             <argument
                 android:name="uri"
                 android:defaultValue="@null"
                 app:argType="android.net.Uri"
                 app:nullable="true" />
         </fragment>
+
         <dialog
             android:id="@+id/addFeedDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.addfeed.AddFeedDialog"
+            android:name="com.torrentbox.app.ui.addfeed.AddFeedDialog"
             android:label="AddFeedDialog"
             tools:layout="@layout/dialog_add_feed_channel">
             <argument
@@ -194,19 +251,22 @@
                 android:id="@+id/action_delete_feed_dialog"
                 app:destination="@id/deleteFeedDialog" />
         </dialog>
+
         <dialog
             android:id="@+id/clipboardDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.ClipboardDialog"
+            android:name="com.torrentbox.app.ui.ClipboardDialog"
             android:label="ClipboardDialog"
             tools:layout="@layout/item_clipboard_list">
             <argument
                 android:name="fragment_request_key"
                 app:argType="string" />
         </dialog>
+
         <include app:graph="@navigation/error_report_graph" />
+
         <dialog
             android:id="@+id/deleteFeedDialog"
-            android:name="org.proninyaroslav.libretorrent.ui.feeds.DeleteFeedDialog"
+            android:name="com.torrentbox.app.ui.feeds.DeleteFeedDialog"
             android:label="DeleteFeedDialog">
             <argument
                 android:name="fragment_request_key"
@@ -215,5 +275,7 @@
                 android:name="feed_count"
                 app:argType="integer" />
         </dialog>
+
     </navigation>
+
 </navigation>

@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.addtag.AddTagViewModel" />
+            type="com.torrentbox.app.ui.addtag.AddTagViewModel" />
     </data>
 
     <LinearLayout
@@ -66,7 +66,7 @@
                     android:layout_toEndOf="@id/color_icon"
                     android:text="@string/tag_color" />
 
-                <org.proninyaroslav.libretorrent.ui.customviews.ColorView
+                <com.torrentbox.app.ui.customviews.ColorView
                     android:id="@+id/color_view"
                     android:layout_width="24dp"
                     android:layout_height="24dp"

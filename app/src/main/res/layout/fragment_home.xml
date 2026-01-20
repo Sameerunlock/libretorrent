@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator_layout"
     style="@style/ThemeOverlay.App.Surface"
     android:layout_width="@dimen/list_pane_width"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient">
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyRecyclerView
+
+    <com.torrentbox.app.ui.customviews.EmptyRecyclerView
         android:id="@+id/torrent_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,15 +23,15 @@
         tools:itemCount="3"
         tools:listitem="@layout/item_torrent_list" />
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+    <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
         android:id="@+id/empty_view_torrent_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"
         app:icon="@drawable/ic_lists_24px"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:text="@string/torrent_list_empty"
-        tools:visibility="gone" />
+        app:iconTint="?attr/colorPrimary"
+        app:text="@string/torrent_list_empty" />
+
+
 
     <RelativeLayout
         android:id="@+id/loading_view_torrent_list"
@@ -98,7 +101,7 @@
         android:hint="@string/search"
         app:layout_anchor="@id/search_bar">
 
-        <org.proninyaroslav.libretorrent.ui.customviews.EmptyRecyclerView
+        <com.torrentbox.app.ui.customviews.EmptyRecyclerView
             android:id="@+id/search_torrent_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -106,12 +109,16 @@
             android:scrollbarStyle="outsideOverlay"
             android:scrollbars="vertical" />
 
-        <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+        <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
             android:id="@+id/empty_view_search_torrent_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="?attr/actionBarSize"
             android:paddingBottom="8dp"
+            android:background="@drawable/bg_empty_state"
+            android:elevation="2dp"
+            app:iconTint="@color/md_theme_primary"
+
             app:icon="@drawable/ic_search_24px"
             app:text="@string/torrent_list_empty" />
 

@@ -77,7 +77,7 @@
             android:title="@string/pref_custom_battery_control_title"
             app:singleLineTitle="false" />
 
-        <org.proninyaroslav.libretorrent.ui.settings.customprefs.SliderPreference
+        <com.torrentbox.app.ui.settings.customprefs.SliderPreference
             android:dependency="@string/pref_key_custom_battery_control"
             android:key="@string/pref_key_custom_battery_control_value"
             android:persistent="false"

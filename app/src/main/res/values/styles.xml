@@ -64,5 +64,6 @@
         <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
     </style>
 
+
     <style name="TextAppearance.App.SectionTitle" parent="TextAppearance.Material3.TitleSmall" />
 </resources>

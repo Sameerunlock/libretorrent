@@ -21,7 +21,7 @@
             android:layout_height="88dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@null"
-            app:tint="?attr/colorPrimary"
+            app:tint="@color/md_theme_primary"
             tools:srcCompat="@drawable/ic_lists_24px" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="?attr/colorPrimary"
+            android:textColor="@color/branding_color"
             tools:text="Empty list" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

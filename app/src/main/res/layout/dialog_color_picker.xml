@@ -20,7 +20,7 @@
             android:layout_marginVertical="@dimen/dialog_padding"
             app:selector="@drawable/colorpickerview_wheel" />
 
-        <org.proninyaroslav.libretorrent.ui.colorpicker.CustomBrightnessSlideBar
+        <com.torrentbox.app.ui.colorpicker.CustomBrightnessSlideBar
             android:id="@+id/brightness_slide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

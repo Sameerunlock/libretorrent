@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <!-- 🔝 APP BAR -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.Material3.ActionBar">
+
+        <!-- Normal toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/hiddenToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="Hidden Torrents"
+            app:navigationIcon="@drawable/ic_lock_24px"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <!-- 🔍 Search bar -->
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/hiddenSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search hidden torrents"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+        <!-- 🧠 Contextual bar (selection mode) -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/hiddenContextualBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            app:menu="@menu/hidden_contextual_menu"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 🔍 SEARCH VIEW -->
+    <com.google.android.material.search.SearchView
+        android:id="@+id/hiddenSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@id/hiddenSearchBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hiddenSearchList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_torrent_list"/>
+    </com.google.android.material.search.SearchView>
+
+    <!-- 📋 MAIN LIST -->
+    <com.torrentbox.app.ui.customviews.EmptyRecyclerView
+        android:id="@+id/hiddenTorrentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_torrent_list"/>
+
+    <!-- 🧾 EMPTY STATE -->
+    <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
+        android:id="@+id/emptyHiddenList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:icon="@drawable/ic_lock_24px"
+        app:text="@string/no_hidden_torrents"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

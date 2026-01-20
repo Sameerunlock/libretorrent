@@ -8,7 +8,7 @@
         android:title="@string/pref_enable_scheduling_start_title"
         app:singleLineTitle="false" />
 
-    <org.proninyaroslav.libretorrent.ui.settings.customprefs.TimePickerPreference
+    <com.torrentbox.app.ui.settings.customprefs.TimePickerPreference
         android:dependency="@string/pref_key_enable_scheduling_start"
         android:key="@string/pref_key_scheduling_start_time"
         android:negativeButtonText="@string/cancel"
@@ -23,7 +23,7 @@
         android:title="@string/pref_enable_scheduling_shutdown_title"
         app:singleLineTitle="false" />
 
-    <org.proninyaroslav.libretorrent.ui.settings.customprefs.TimePickerPreference
+    <com.torrentbox.app.ui.settings.customprefs.TimePickerPreference
         android:dependency="@string/pref_key_enable_scheduling_shutdown"
         android:key="@string/pref_key_scheduling_shutdown_time"
         android:negativeButtonText="@string/cancel"

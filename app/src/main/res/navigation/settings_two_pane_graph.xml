@@ -29,17 +29,22 @@
         android:id="@+id/action_streaming_settings"
         app:destination="@id/streamingSettingsFragment" />
 
+    <action
+        android:id="@+id/action_about_settings"
+        app:destination="@id/aboutSettingsFragment" />
+
+
     <fragment
         android:id="@+id/appearanceSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.AppearanceSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.AppearanceSettingsFragment"
         android:label="AppearanceSettingsFragment" />
     <fragment
         android:id="@+id/behaviorSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.BehaviorSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.BehaviorSettingsFragment"
         android:label="BehaviorSettingsFragment" />
     <fragment
         android:id="@+id/networkSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.NetworkSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.NetworkSettingsFragment"
         android:label="NetworkSettingsFragment">
         <action
             android:id="@+id/action_proxy_settings"
@@ -58,11 +63,11 @@
     </fragment>
     <fragment
         android:id="@+id/proxySettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.ProxySettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.ProxySettingsFragment"
         android:label="ProxySettingsFragment" />
     <fragment
         android:id="@+id/anonymousModeSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.AnonymousModeSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.AnonymousModeSettingsFragment"
         android:label="AnonymousModeSettingsFragment">
         <argument
             android:name="fragment_request_key"
@@ -70,11 +75,11 @@
     </fragment>
     <fragment
         android:id="@+id/storageSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.StorageSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.StorageSettingsFragment"
         android:label="StorageSettingsFragment" />
     <fragment
         android:id="@+id/limitationsSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.LimitationsSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.LimitationsSettingsFragment"
         android:label="LimitationsSettingsFragment">
         <action
             android:id="@+id/action_auto_manage_settings"
@@ -86,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/autoManageSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.AutoManageSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.AutoManageSettingsFragment"
         android:label="AutoManageSettingsFragment">
         <argument
             android:name="fragment_request_key"
@@ -94,11 +99,11 @@
     </fragment>
     <fragment
         android:id="@+id/schedulingSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.SchedulingSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.SchedulingSettingsFragment"
         android:label="SchedulingSettingsFragment" />
     <fragment
         android:id="@+id/feedSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.FeedSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.FeedSettingsFragment"
         android:label="FeedSettingsFragment">
         <action
             android:id="@+id/action_auto_refresh_settings"
@@ -110,7 +115,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedAutoRefreshSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.FeedAutoRefreshSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.FeedAutoRefreshSettingsFragment"
         android:label="FeedAutoRefreshSettingsFragment">
         <argument
             android:name="fragment_request_key"
@@ -118,6 +123,12 @@
     </fragment>
     <fragment
         android:id="@+id/streamingSettingsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.settings.pages.StreamingSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.StreamingSettingsFragment"
         android:label="StreamingSettingsFragment" />
+
+    <fragment
+        android:id="@+id/aboutSettingsFragment"
+        android:name="com.torrentbox.app.ui.settings.pages.AboutSettingsFragment"
+        android:label="About" />
+
 </navigation>

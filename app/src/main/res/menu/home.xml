@@ -2,9 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- 🔍 SEARCH ICON -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_24px"
+        android:title="@string/search"
+        android:contentDescription="@string/search"
+        app:showAsAction="always" />
+
+
     <item
         android:id="@+id/pause_all_menu"
-        android:contentDescription="@string/pause_all"
         android:icon="@drawable/ic_pause_24px"
         android:title="@string/pause_all"
         app:showAsAction="ifRoom" />
@@ -17,18 +25,16 @@
 
     <item
         android:id="@+id/log_menu"
-        android:contentDescription="@string/log_journal"
         android:title="@string/log_journal" />
 
     <item
-        android:id="@+id/about_menu"
-        android:contentDescription="@string/about"
-        android:icon="@drawable/ic_info_24px"
-        android:title="@string/about" />
+        android:id="@+id/action_hidden"
+        android:title="Hidden"
+        android:visible="false" />
+
 
     <item
         android:id="@+id/shutdown_app_menu"
-        android:contentDescription="@string/shutdown"
         android:icon="@drawable/ic_power_settings_new_24px"
         android:title="@string/shutdown" />
 </menu>

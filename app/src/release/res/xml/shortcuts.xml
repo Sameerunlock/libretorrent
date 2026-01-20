@@ -7,9 +7,9 @@
         android:enabled="true"
         android:icon="@drawable/shortcut_add">
         <intent
-            android:action="org.proninyaroslav.libretorrent.ADD_TORRENT_SHORTCUT"
-            android:targetClass="org.proninyaroslav.libretorrent.MainActivity"
-            android:targetPackage="org.proninyaroslav.libretorrent" />
+            android:action="com.torrentbox.app.ADD_TORRENT_SHORTCUT"
+            android:targetClass="com.torrentbox.app.MainActivity"
+            android:targetPackage="com.torrentbox.app" />
     </shortcut>
 
     <shortcut
@@ -17,7 +17,7 @@
         android:icon="@drawable/shortcut_feed">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="org.proninyaroslav.libretorrent.ui.addfeed.AddFeedActivity"
-            android:targetPackage="org.proninyaroslav.libretorrent" />
+            android:targetClass="com.torrentbox.app.ui.addfeed.AddFeedActivity"
+            android:targetPackage="com.torrentboc.app" />
     </shortcut>
 </shortcuts>

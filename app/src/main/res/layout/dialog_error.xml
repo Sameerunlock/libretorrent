@@ -20,7 +20,7 @@
             android:minWidth="@dimen/min_width_dialog"
             android:orientation="vertical">
 
-            <org.proninyaroslav.libretorrent.ui.customviews.ExpansionHeader
+            <com.torrentbox.app.ui.customviews.ExpansionHeader
                 android:id="@+id/expansion_header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

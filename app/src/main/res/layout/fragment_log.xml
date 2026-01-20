@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.log.LogViewModel" />
+            type="com.torrentbox.app.ui.log.LogViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -48,7 +48,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <org.proninyaroslav.libretorrent.ui.customviews.SwitchBar
+            <com.torrentbox.app.ui.customviews.SwitchBar
                 android:id="@+id/enable_log"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:checked="@={viewModel.mutableParams.logging}"
                 android:text="@string/enable_journal" />
 
-            <org.proninyaroslav.libretorrent.ui.customviews.EmptyRecyclerView
+            <com.torrentbox.app.ui.customviews.EmptyRecyclerView
                 android:id="@+id/log_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -72,7 +72,7 @@
                 tools:itemCount="3"
                 tools:listitem="@layout/item_log_list" />
 
-            <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+            <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
                 android:id="@+id/empty_view_log"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

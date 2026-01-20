@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.addtorrent.AddTorrentViewModel" />
+            type="com.torrentbox.app.ui.addtorrent.AddTorrentViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

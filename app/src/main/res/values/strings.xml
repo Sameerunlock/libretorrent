@@ -54,7 +54,9 @@
     <string name="force_announce_torrent">Force-announce</string>
     <string name="add_link">Add link</string>
     <string name="dialog_add_link_title">Enter the infohash value, magnet link, or HTTP/S link</string>
-    <string name="torrent_list_empty">No torrents</string>
+    <string name="torrent_list_empty"> No torrents yet</string>
+    <string name="no_hidden_torrents">No hidden torrents</string>
+
     <string name="select_or_add_torrent">Select or add a torrent</string>
     <string name="error_empty_link">Enter the link</string>
     <string name="error_invalid_link">Invalid link</string>
@@ -69,7 +71,10 @@
     <string name="proxy_settings_apply_after_reboot">Restart the app to use the new proxy settings.</string>
     <string name="theme_settings_apply_after_reboot">Restart the app to use the new theme.</string>
     <string name="apply_settings_after_reboot">Changes will be applied after restarting the app.</string>
+    <string name="about_summary">Open source licenses and app info</string>
+    <string name="pref_key_about_settings">about_settings</string>
     <string name="about">About</string>
+
     <string name="error_open_torrent">Unable to open torrent</string>
     <!-- Navigation drawer -->
     <string name="session_stats_dht_nodes">DHT nodes: %1$d</string>

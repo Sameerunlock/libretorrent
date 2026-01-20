@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.addtorrent.AddTorrentViewModel" />
+            type="com.torrentbox.app.ui.addtorrent.AddTorrentViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -27,7 +27,7 @@
             android:clipToPadding="false"
             android:paddingBottom="@dimen/bottom_bar_padding">
 
-            <org.proninyaroslav.libretorrent.ui.customviews.MaxWidthLinearLayout
+            <com.torrentbox.app.ui.customviews.MaxWidthLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -427,7 +427,7 @@
                             tools:text="LibreTorrent" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
-            </org.proninyaroslav.libretorrent.ui.customviews.MaxWidthLinearLayout>
+            </com.torrentbox.app.ui.customviews.MaxWidthLinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

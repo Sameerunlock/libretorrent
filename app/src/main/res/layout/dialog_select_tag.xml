@@ -7,7 +7,7 @@
     android:minWidth="@dimen/min_width_dialog"
     android:padding="@dimen/dialog_padding">
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyRecyclerView
+    <com.torrentbox.app.ui.customviews.EmptyRecyclerView
         android:id="@+id/tags_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         tools:itemCount="3"
         tools:listitem="@layout/item_tags_list" />
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+    <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
         android:id="@+id/empty_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

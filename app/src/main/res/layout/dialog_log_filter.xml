@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.log.LogViewModel" />
+            type="com.torrentbox.app.ui.log.LogViewModel" />
     </data>
 
     <LinearLayout

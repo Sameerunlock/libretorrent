@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/navBarFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.NavBarFragment"
+        android:name="com.torrentbox.app.ui.NavBarFragment"
         android:label="NavBarFragment">
         <action
             android:id="@+id/action_open_file_dialog"
@@ -54,12 +54,12 @@
     </fragment>
     <fragment
         android:id="@+id/fileManagerFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.filemanager.FileManagerFragment"
+        android:name="com.torrentbox.app.ui.filemanager.FileManagerFragment"
         android:label="FileManagerFragment"
         tools:layout="@layout/fragment_file_manager">
         <argument
             android:name="config"
-            app:argType="org.proninyaroslav.libretorrent.ui.filemanager.FileManagerConfig" />
+            app:argType="com.torrentbox.app.ui.filemanager.FileManagerConfig" />
         <action
             android:id="@+id/action_open_input_name_dialog"
             app:destination="@id/inputNameDialog" />
@@ -84,7 +84,7 @@
     </fragment>
     <fragment
         android:id="@+id/addTorrentFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.addtorrent.AddTorrentFragment"
+        android:name="com.torrentbox.app.ui.addtorrent.AddTorrentFragment"
         android:label="AddTorrentFragment"
         tools:layout="@layout/fragment_add_torrent">
         <argument
@@ -115,7 +115,7 @@
     </fragment>
     <dialog
         android:id="@+id/inputNameDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.filemanager.InputNameDialog"
+        android:name="com.torrentbox.app.ui.filemanager.InputNameDialog"
         android:label="InputNameDialog"
         tools:layout="@layout/dialog_text_input">
         <argument
@@ -124,7 +124,7 @@
     </dialog>
     <dialog
         android:id="@+id/goToFolderDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.filemanager.GoToFolderDialog"
+        android:name="com.torrentbox.app.ui.filemanager.GoToFolderDialog"
         android:label="GoToFolderDialog"
         tools:layout="@layout/dialog_text_input">
         <argument
@@ -134,7 +134,7 @@
     <include app:graph="@navigation/error_report_graph" />
     <dialog
         android:id="@+id/permissionDeniedDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.PermissionDeniedDialog"
+        android:name="com.torrentbox.app.ui.PermissionDeniedDialog"
         android:label="PermissionDeniedDialog">
         <argument
             android:name="fragment_request_key"
@@ -142,7 +142,7 @@
     </dialog>
     <fragment
         android:id="@+id/createTorrentFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.createtorrent.CreateTorrentFragment"
+        android:name="com.torrentbox.app.ui.createtorrent.CreateTorrentFragment"
         android:label="CreateTorrentFragment"
         tools:layout="@layout/fragment_create_torrent">
         <action
@@ -167,7 +167,7 @@
     </fragment>
     <dialog
         android:id="@+id/selectTagDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.tag.SelectTagDialog"
+        android:name="com.torrentbox.app.ui.tag.SelectTagDialog"
         android:label="SelectTagDialog"
         tools:layout="@layout/dialog_select_tag">
         <argument
@@ -179,7 +179,7 @@
             <argument
                 android:name="tag"
                 android:defaultValue="@null"
-                app:argType="org.proninyaroslav.libretorrent.core.model.data.entity.TagInfo"
+                app:argType="com.torrentbox.app.core.model.data.entity.TagInfo"
                 app:nullable="true" />
         </action>
         <argument

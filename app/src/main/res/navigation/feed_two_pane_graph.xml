@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/blankFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.BlankFragment"
+        android:name="com.torrentbox.app.ui.detailtorrent.BlankFragment"
         android:label="BlankFragment"
         tools:layout="@layout/fragment_blank">
         <argument
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedItemsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.feeditems.FeedItemsFragment"
+        android:name="com.torrentbox.app.ui.feeditems.FeedItemsFragment"
         android:label="FeedItemsFragment"
         tools:layout="@layout/fragment_feed_items">
         <argument

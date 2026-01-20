@@ -6,9 +6,9 @@ plugins {
 }
 
 android {
-    namespace 'org.proninyaroslav.libretorrent'
+    namespace "com.torrentbox.app"
     defaultConfig {
-        applicationId 'org.proninyaroslav.libretorrent'
+        applicationId "com.torrentbox.app"
         minSdkVersion 24
         targetSdkVersion 35
         compileSdkVersion 36
@@ -55,7 +55,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
             buildConfigField('boolean', SESSION_LOGGING, 'false')
-            signingConfig signingConfigs.debug
+            //signingConfig signingConfigs.debug
         }
 
         debug {
@@ -176,6 +176,8 @@ dependencies {
     def ACRA_VERSION = '5.13.1'
     implementation "ch.acra:acra-dialog:$ACRA_VERSION"
     implementation "ch.acra:acra-mail:$ACRA_VERSION"
+
+    implementation "androidx.biometric:biometric:1.2.0-alpha05"
 
     /* libtorrent wrapper */
     def LIBTORRENT4J_VERSION = '2.1.0-38'

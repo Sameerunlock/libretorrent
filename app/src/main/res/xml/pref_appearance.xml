@@ -49,7 +49,7 @@
                 android:title="@string/pref_led_indicator_notify_title"
                 app:singleLineTitle="false" />
 
-            <org.proninyaroslav.libretorrent.ui.settings.customprefs.ColorPickerPreference
+            <com.torrentbox.app.ui.settings.customprefs.ColorPickerPreference
                 android:dependency="@string/pref_key_led_indicator_notify"
                 android:key="@string/pref_key_led_indicator_color_notify"
                 android:persistent="false"

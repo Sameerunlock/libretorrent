@@ -7,11 +7,11 @@
 
         <import type="android.view.View" />
 
-        <import type="org.proninyaroslav.libretorrent.ui.createtorrent.CreateTorrentViewModel" />
+        <import type="com.torrentbox.app.ui.createtorrent.CreateTorrentViewModel" />
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.createtorrent.CreateTorrentViewModel" />
+            type="com.torrentbox.app.ui.createtorrent.CreateTorrentViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -52,7 +52,7 @@
             android:paddingBottom="@dimen/bottom_bar_padding"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <org.proninyaroslav.libretorrent.ui.customviews.MaxWidthLinearLayout
+            <com.torrentbox.app.ui.customviews.MaxWidthLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -200,7 +200,7 @@
                             android:hint="@string/skip_files"
                             app:helperText="@string/skip_files_hint">
 
-                            <org.proninyaroslav.libretorrent.ui.customviews.FixHintTextInputEditText
+                            <com.torrentbox.app.ui.customviews.FixHintTextInputEditText
                                 android:id="@+id/skip_files"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
                             android:hint="@string/tracker_urls"
                             app:helperText="@string/tracker_urls_hint">
 
-                            <org.proninyaroslav.libretorrent.ui.customviews.FixHintTextInputEditText
+                            <com.torrentbox.app.ui.customviews.FixHintTextInputEditText
                                 android:id="@+id/tracker_urls"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                             android:hint="@string/web_seed_urls"
                             app:helperText="@string/web_seed_urls_hint">
 
-                            <org.proninyaroslav.libretorrent.ui.customviews.FixHintTextInputEditText
+                            <com.torrentbox.app.ui.customviews.FixHintTextInputEditText
                                 android:id="@+id/web_seed_urls"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
                             android:hint="@string/comments"
                             app:helperText="@string/optional_hint">
 
-                            <org.proninyaroslav.libretorrent.ui.customviews.FixHintTextInputEditText
+                            <com.torrentbox.app.ui.customviews.FixHintTextInputEditText
                                 android:id="@+id/comments"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -299,7 +299,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
-            </org.proninyaroslav.libretorrent.ui.customviews.MaxWidthLinearLayout>
+            </com.torrentbox.app.ui.customviews.MaxWidthLinearLayout>
         </androidx.core.widget.NestedScrollView>
 
         <RelativeLayout

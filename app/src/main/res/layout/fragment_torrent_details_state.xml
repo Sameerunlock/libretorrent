@@ -5,15 +5,15 @@
 
     <data>
 
-        <import type="org.proninyaroslav.libretorrent.core.utils.BindingAdapterUtils" />
+        <import type="com.torrentbox.app.core.utils.BindingAdapterUtils" />
 
-        <import type="org.proninyaroslav.libretorrent.core.utils.DateUtils" />
+        <import type="com.torrentbox.app.core.utils.DateUtils" />
 
         <import type="java.util.Formatter" />
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.detailtorrent.TorrentDetailsViewModel" />
+            type="com.torrentbox.app.ui.detailtorrent.TorrentDetailsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView

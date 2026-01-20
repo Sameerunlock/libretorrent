@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/blankFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.BlankFragment"
+        android:name="com.torrentbox.app.ui.detailtorrent.BlankFragment"
         android:label="BlankFragment"
         tools:layout="@layout/fragment_blank">
         <argument
@@ -30,11 +30,11 @@
 
     <fragment
         android:id="@+id/torrentDetailsFragment"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.TorrentDetailsFragment"
+        android:name="com.torrentbox.app.ui.detailtorrent.TorrentDetailsFragment"
         android:label="TorrentDetailsFragment"
         tools:layout="@layout/fragment_torrent_details">
         <argument
-            android:name="torrent_id"
+            android:name="torrentId"
             app:argType="string" />
         <action
             android:id="@+id/action_select_tag_dialog"
@@ -72,7 +72,7 @@
     </fragment>
     <dialog
         android:id="@+id/selectTagDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.tag.SelectTagDialog"
+        android:name="com.torrentbox.app.ui.tag.SelectTagDialog"
         android:label="SelectTagDialog"
         tools:layout="@layout/dialog_select_tag">
         <argument
@@ -84,7 +84,7 @@
             <argument
                 android:name="tag"
                 android:defaultValue="@null"
-                app:argType="org.proninyaroslav.libretorrent.core.model.data.entity.TagInfo"
+                app:argType="com.torrentbox.app.core.model.data.entity.TagInfo"
                 app:nullable="true" />
         </action>
         <argument
@@ -94,7 +94,7 @@
     <include app:graph="@navigation/tag_graph" />
     <dialog
         android:id="@+id/editTorrentNameDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.EditTorrentNameDialog"
+        android:name="com.torrentbox.app.ui.detailtorrent.EditTorrentNameDialog"
         android:label="EditTorrentNameDialog"
         tools:layout="@layout/dialog_text_input">
         <argument
@@ -107,7 +107,7 @@
     </dialog>
     <dialog
         android:id="@+id/changePriorityDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.pages.files.ChangePriorityDialog"
+        android:name="com.torrentbox.app.ui.detailtorrent.pages.files.ChangePriorityDialog"
         android:label="ChangePriorityDialog"
         tools:layout="@layout/dialog_change_priority">
         <argument
@@ -115,11 +115,11 @@
             app:argType="string" />
         <argument
             android:name="initial_priority"
-            app:argType="org.proninyaroslav.libretorrent.core.model.filetree.FilePriority" />
+            app:argType="com.torrentbox.app.core.model.filetree.FilePriority" />
     </dialog>
     <dialog
         android:id="@+id/deleteTrackersDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.pages.trackers.DeleteTrackersDialog"
+        android:name="com.torrentbox.app.ui.detailtorrent.pages.trackers.DeleteTrackersDialog"
         android:label="DeleteTrackersDialog">
         <argument
             android:name="trackers_count"
@@ -131,7 +131,7 @@
     <include app:graph="@navigation/error_report_graph" />
     <dialog
         android:id="@+id/deleteDetailsTorrentDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.home.DeleteTorrentDialog"
+        android:name="com.torrentbox.app.ui.home.DeleteTorrentDialog"
         android:label="DeleteTorrentDialog"
         tools:layout="@layout/dialog_delete_torrent">
         <argument
@@ -141,7 +141,7 @@
     </dialog>
     <dialog
         android:id="@+id/addTrackersDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.AddTrackersDialog"
+        android:name="com.torrentbox.app.ui.detailtorrent.AddTrackersDialog"
         android:label="AddTrackersDialog"
         tools:layout="@layout/dialog_multiline_text_input">
         <argument
@@ -150,7 +150,7 @@
     </dialog>
     <dialog
         android:id="@+id/speedLimitDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.detailtorrent.SpeedLimitDialog"
+        android:name="com.torrentbox.app.ui.detailtorrent.SpeedLimitDialog"
         android:label="SpeedLimitDialog"
         tools:layout="@layout/dialog_speed_limit">
         <argument
@@ -158,6 +158,6 @@
             app:argType="string" />
         <argument
             android:name="init_speed_limit"
-            app:argType="org.proninyaroslav.libretorrent.ui.detailtorrent.SpeedLimitDialog$Speed" />
+            app:argType="com.torrentbox.app.ui.detailtorrent.SpeedLimitDialog$Speed" />
     </dialog>
 </navigation>

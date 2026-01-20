@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="org.proninyaroslav.libretorrent.ui.addlink.AddLinkViewModel" />
+            type="com.torrentbox.app.ui.addlink.AddLinkViewModel" />
     </data>
 
     <RelativeLayout

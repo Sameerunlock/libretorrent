@@ -1,3 +1,34 @@
+# TorrentBox – Release Notes
+
+---
+
+## TorrentBox 1.0.0 (Initial Release)
+**Date:** 2026-01-XX
+
+### Added
+- Rebranded app name and identity as **TorrentBox**
+- New launcher and notification icons
+- Hidden Torrents feature (password / biometric protected)
+- Improved UI/UX polish
+- Updated Privacy Policy for Play Store compliance
+
+### Changed
+- Package name updated to `com.torrentbox.app`
+- App name changed from LibreTorrent to TorrentBox
+- Branding and resources updated
+- Removed debug-only labels from release builds
+
+### Notes
+TorrentBox is a fork of LibreTorrent and follows GPL v3 license.
+All modifications are clearly attributed.
+
+---
+
+# LibreTorrent – Original Changelog
+(Original project history preserved below)
+
+---
+
 ### Version 4.0.1 (2025-08-12)
 
 Fix crash on startup and on the settings page

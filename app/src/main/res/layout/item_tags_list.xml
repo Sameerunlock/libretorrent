@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:minHeight="@dimen/list_item_one_line_height">
 
-        <org.proninyaroslav.libretorrent.ui.customviews.ColorView
+        <com.torrentbox.app.ui.customviews.ColorView
             android:id="@+id/color"
             android:layout_width="24dp"
             android:layout_height="24dp"

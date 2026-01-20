@@ -34,13 +34,13 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <org.proninyaroslav.libretorrent.ui.customviews.MaterialSwipeRefreshLayout
+    <com.torrentbox.app.ui.customviews.MaterialSwipeRefreshLayout
         android:id="@+id/swipe_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <org.proninyaroslav.libretorrent.ui.customviews.EmptyRecyclerView
+        <com.torrentbox.app.ui.customviews.EmptyRecyclerView
             android:id="@+id/feed_items_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,9 +49,9 @@
             android:scrollbarStyle="outsideOverlay"
             android:scrollbars="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </org.proninyaroslav.libretorrent.ui.customviews.MaterialSwipeRefreshLayout>
+    </com.torrentbox.app.ui.customviews.MaterialSwipeRefreshLayout>
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+    <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
         android:id="@+id/empty_view_feed_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

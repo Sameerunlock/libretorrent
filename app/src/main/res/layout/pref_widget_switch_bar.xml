@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <org.proninyaroslav.libretorrent.ui.customviews.SwitchBar
+    <com.torrentbox.app.ui.customviews.SwitchBar
         android:id="@+id/switchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

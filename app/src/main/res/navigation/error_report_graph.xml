@@ -7,7 +7,7 @@
 
     <dialog
         android:id="@+id/errorReportDialog"
-        android:name="org.proninyaroslav.libretorrent.ui.errorreport.ErrorReportDialog"
+        android:name="com.torrentbox.app.ui.errorreport.ErrorReportDialog"
         android:label="ErrorReportDialog"
         tools:layout="@layout/dialog_error">
         <argument

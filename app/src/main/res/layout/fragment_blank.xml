@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    tools:context="org.proninyaroslav.libretorrent.ui.detailtorrent.BlankFragment"> <!-- For SlidingPaneLayout -->
+    tools:context="com.torrentbox.app.ui.detailtorrent.BlankFragment"> <!-- For SlidingPaneLayout -->
 
-    <org.proninyaroslav.libretorrent.ui.customviews.EmptyListPlaceholder
+    <com.torrentbox.app.ui.customviews.EmptyListPlaceholder
         android:id="@+id/placeholder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
